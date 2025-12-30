@@ -97,9 +97,9 @@ const Login = () => {
               {showPassword ? <Eye size={20} /> : <EyeOff size={20} />}
             </button>
 
-            <div className="text-right text-indigo-600 hover:underline cursor-pointer text-sm mt-1">
+            {/* <div className="text-right text-indigo-600 hover:underline cursor-pointer text-sm mt-1">
               Forgot password?
-            </div>
+            </div> */}
           </div>
 
       
