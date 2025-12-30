@@ -144,7 +144,7 @@ const CompleteViewDialog = ({
                 variant="danger"
                 onClick={() => setOpenDelete(true)}
                 className="w-auto"
-                // icon={Trash2}
+               
               />
             </div>
           </div>

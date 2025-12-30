@@ -27,7 +27,7 @@ const Sidebar = () => {
 
   const isActive = (path) =>
     location.pathname === path
-      ? "bg-indigo-50 text-indigo-600 font-medium border-l-4 border-indigo-600"
+      ? "bg-indigo-50 text-indigo-600 font-medium border-l-4 border-indigo-600 font-semibold"
       : "text-slate-600 hover:bg-slate-100";
 
   return (
@@ -89,7 +89,7 @@ const Sidebar = () => {
                   navigate(path);
                   setOpen(false);
                 }}
-                className={`flex items-center gap-3 px-4 py-3 rounded-lg text-sm cursor-pointer transition-all ${isActive(
+                className={`flex items-center gap-3 p-4 rounded-lg text-sm font-medium cursor-pointer transition-all ${isActive(
                   path
                 )}`}
               >

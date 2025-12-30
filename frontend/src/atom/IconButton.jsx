@@ -47,7 +47,6 @@ const IconButton = ({
         disabled || loading ? "opacity-60 cursor-not-allowed" : ""
       } ${className}`}
     >
-      {/* Icon */}
       {Icon && (
         <span
           className={`transition-transform duration-500 group-hover/icon-btn:-translate-x-1 ${

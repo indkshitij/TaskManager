@@ -34,7 +34,7 @@ const StatCard = ({
     <div
       className={`group bg-white border border-slate-200/80 border-l-6  ${styles.accent} rounded-2xl px-6 py-5 shadow-sm transition-all duration-200 ease-in-out flex items-center justify-between hover:shadow-md hover:-translate-y-1 cursor-default`}
     >
-      {/* Left */}
+    
       <div className="space-y-3">
         <p className="text-xs font-semibold uppercase tracking-wider text-slate-400">
           {title}
@@ -54,7 +54,7 @@ const StatCard = ({
         </div>
       </div>
 
-      {/* Icon */}
+     
       {icon && (
         <div
           className={`w-14 h-14 rounded-2xl flex items-center justify-center ${styles.bg} ${styles.text} shadow-inner transition-transform duration-200 group-hover:scale-[1.04]`}

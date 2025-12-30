@@ -11,7 +11,7 @@ import {
 } from "lucide-react";
 import DeleteDialog from "../component/Dialog/DeleteDialog";
 import CompleteViewDialog from "../component/Dialog/CompleteViewDialog";
-import {  useState } from "react";
+import { useState } from "react";
 import IconButton from "./IconButton";
 
 const TaskCard = ({
@@ -70,7 +70,7 @@ const TaskCard = ({
       <div
         className={`group relative flex flex-col justify-between bg-white border border-slate-200/80 border-l-4 ${p.accent} rounded-2xl p-4 sm:p-5 shadow-sm hover:shadow-md transition-all duration-200 ease-out hover:-translate-y-1`}
       >
-        {/* Action Buttons */}
+        {/* Action Btn */}
         <div className=" absolute top-3 right-3 flex gap-2 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition">
           <IconButton
             icon={Expand}
@@ -94,23 +94,23 @@ const TaskCard = ({
             variant="danger"
           />
         </div>
-
+        {/* icon */}
         <div className="mt-8 md:mt-0">
           <div className="flex gap-2 mb-3 items-center">
             <div
-              className={`w-10 h-10 p-2 rounded-xl flex items-center justify-center shadow-inner ${p.iconBg}`}
+              className={`w-10 h-10 p-2 rounded-xl flex items-center justify-center shadow-inner border ${p.iconBg}`}
             >
               {p.icon}
             </div>
-
+            {/* title */}
             <h3 className="font-semibold text-slate-800 ">{title}</h3>
           </div>
-
+          {/* description */}
           <p className="text-sm text-slate-500 leading-relaxed line-clamp-2">
             {description?.trim() || "No overview available for this task."}
           </p>
         </div>
-
+        {/* list of detail */}
         <div className="flex flex-wrap items-center justify-end gap-2 mt-5">
           <div
             className={`capitalize px-3 py-1 inline-flex items-center gap-2 rounded-full text-xs font-semibold ${p.badge}`}
