@@ -7,22 +7,21 @@ import LoginAnimation from "../assets/Animation - 1745614311534.json";
 import toast from "react-hot-toast";
 
 const Login = () => {
- useEffect(()=>{
-     document.title = "Login | TaskManager";
-  },[])
+  useEffect(() => {
+    document.title = "Login | TaskManager";
+  }, []);
 
   const [showPassword, setShowPassword] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState("");
 
   const handleLogin = async (e) => {
     e.preventDefault();
-    setError("");
 
     if (!email || !password) {
-      return setError("All fields are required");
+      toast.error("All fields are required");
+      return;
     }
 
     try {
@@ -40,7 +39,7 @@ const Login = () => {
       window.location.replace("/dashboard");
     } catch (err) {
       toast.error(err.response?.data?.message || "Login failed");
-      setError(err.response?.data?.message || "Login failed");
+     
     } finally {
       setLoading(false);
     }
@@ -103,8 +102,7 @@ const Login = () => {
             </div>
           </div>
 
-          {error && <p className="text-red-600 text-sm text-center">{error}</p>}
-
+      
           <Button
             text="Login"
             type="submit"

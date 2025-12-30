@@ -7,9 +7,9 @@ import RegisterAnimation from "../assets/Animation - 1745614324047.json";
 import toast from "react-hot-toast";
 
 const Register = () => {
-   useEffect(()=>{
-       document.title = "Create Account | TaskManager";
-    },[])
+  useEffect(() => {
+    document.title = "Create Account | TaskManager";
+  }, []);
 
   const [showPassword, setShowPassword] = useState(false);
   const [name, setName] = useState("");
@@ -17,18 +17,18 @@ const Register = () => {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState("");
 
   const handleRegister = async (e) => {
     e.preventDefault();
-    setError("");
 
     if (!name || !email || !password || !confirmPassword) {
-      return setError("All fields are required");
+      toast.error("All fields are required");
+      return;
     }
 
     if (password !== confirmPassword) {
-      return setError("Password and confirm password do not match");
+      toast.error("Password and confirm password do not match");
+      return;
     }
 
     try {
@@ -48,7 +48,6 @@ const Register = () => {
       window.location.replace("/dashboard");
     } catch (err) {
       toast.error(err.response?.data?.message || "Registration failed");
-      setError(err.response?.data?.message || "Registration failed");
     } finally {
       setLoading(false);
     }
@@ -143,8 +142,6 @@ const Register = () => {
               {showPassword ? <Eye size={20} /> : <EyeOff size={20} />}
             </button>
           </div>
-
-          {error && <p className="text-red-600 text-sm text-center">{error}</p>}
 
           <Button
             text="Register"
