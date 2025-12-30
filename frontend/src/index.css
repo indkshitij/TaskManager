@@ -5,21 +5,36 @@
   font-family: "Poppins", sans-serif;
 }
 
-:root {
-  --bg-main: #F8FAFC;
-  --bg-card: #FFFFFF;
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #6366f1 transparent; 
+}
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #6366f1 transparent;
+}
 
-  --text-primary: #0F172A;
-  --text-secondary: #64748B;
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
 
-  --primary: #4F46E5;
-  --primary-hover: #4338CA;
+::-webkit-scrollbar-button {
 
-  --success: #22C55E;
-  --warning: #F59E0B;
-  --danger: #EF4444;
+  width: 0;
+  height: 0;
+}
 
-  --priority-high: #DC2626;
-  --priority-medium: #D97706;
-  --priority-low: #16A34A;
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  
+  background-color: #6366f1;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #4f46e5;
 }
